@@ -108,7 +108,7 @@ tar zxvf ./ffmpeg-2.0.1.tar.gz
 if_error $?
 cd ffmpeg-2.0.1
 if_error $?
-./configure --enable-static --disable-shared --enable-gpl  --enable-libmp3lame --enable-nonfree --enable-libaacplus
+./configure --prefix=/usr --enable-static --disable-shared --enable-gpl  --enable-libmp3lame --enable-nonfree --enable-libaacplus
 if_error $?
 make -j 4
 if_error $?
@@ -118,7 +118,7 @@ if_error $?
 ldconfig
 if_error $?
 
-ffmpeg -h
+/usr/bin/ffmpeg -h
 if_error $?
 dump "Install ffmpeg success"
 
