@@ -96,7 +96,7 @@ make -j 4
 if_error $?
 make install
 if_error $?
-
+cd ..
 dump "ldconfig"
 ldconfig
 if_error $?
@@ -117,6 +117,7 @@ if_error $?
 
 ldconfig
 if_error $?
+cd ..
 
 /usr/bin/ffmpeg -h
 if_error $?
